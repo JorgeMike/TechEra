@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 1rem 4rem;
+}
+
+.navbarBrand a {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000;
+}
+
+.navbarItems {
+  display: inherit;
+}
+
+.navbarItems a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #000000;
+}
+
+.navbarItems svg {
+  margin: 0 1rem;
+}
+
+.navbarItems div{
+  margin: 0 1rem;
+}
+
+.navbarItems a:last-child{
+    font-weight: 700;
+}
