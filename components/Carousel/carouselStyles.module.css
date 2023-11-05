@@ -56,4 +56,8 @@
   .carouselCaption p {
     font-size: 15px;
   }
+
+  .carouselCaption{
+    margin: 0 25px;
+  }
 }

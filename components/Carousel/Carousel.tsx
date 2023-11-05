@@ -39,7 +39,7 @@ const carouselImages: CarouselItemProps[] = [
 
 export default function Carousel() {
   return (
-    <div className="container mt-4">
+    <div className="container mt-3">
       <div
         id="carouselExampleAutoplaying"
         className="carousel slide"

@@ -1,9 +1,10 @@
-import { BiSearch } from "react-icons/bi";
+import { GoSearch } from "react-icons/go";
+import styles from "../Navbar/navbarStyles.module.css";
 export default function SearchBar() {
   return (
-    <div>
-      <BiSearch />
-      <input />
+    <div className={styles.navbarSearchBar}>
+      <GoSearch />
+      <input placeholder="Buscar" />
     </div>
   );
 }
