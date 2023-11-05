@@ -19,7 +19,7 @@
 
   overflow: hidden;
   max-height: 0; /* Inicia sin altura para ocultarlo */
-  transition: max-height 0.3s ease;
+  transition: max-height 0.7s ease-in-out;
 }
 
 .navbarItems > * {
@@ -51,7 +51,7 @@
 }
 
 .navbarItemsActive {
-  max-height: 500px; /* un valor suficientemente grande para mostrar todo tu menú */
+  max-height: 500px;
 }
 
 @media (max-width: 835px) {
@@ -61,7 +61,7 @@
     width: 100%;
     z-index: 10;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    top: 65px;
+    top: 55px;
     left: 0;
     flex-direction: column;
   }
@@ -72,17 +72,31 @@
 
   .navbarItems > *:nth-child(4) {
     font-weight: 700;
-    margin-bottom: 20px
+    margin-bottom: 20px;
   }
 
   .navbarToggle {
     background-color: #ffffff;
     border: none;
     display: inline-block;
+    transition: all 0.4s ease;
+    border-radius: 4px;
+    animation: transform;
+    margin-right: 10px;
+  }
+
+  .navbarToggleActive {
+    background-color: #efefef;
+    color: #4d4d4d;
+    transform: scale(1.4);
   }
 
   .navbarItemsActive {
     display: flex;
+  }
+
+  .navbar {
+    margin: 0.5rem 1rem;
   }
 }
 
@@ -100,4 +114,41 @@
   .navbarToggle {
     display: none;
   }
+}
+
+/* styles.css */
+
+@keyframes rotateSun {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateMoon {
+  from {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+
+.themeIcon {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.themeIcon.sun {
+  animation: rotateSun 1.5s ease forwards;
+}
+
+.themeIcon.moon {
+  animation: rotateMoon 1.5s ease forwards;
 }

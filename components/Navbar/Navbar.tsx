@@ -2,7 +2,7 @@
 import Link from "next/link";
 import styles from "./navbarStyles.module.css";
 import SearchBar from "../SearchBar/SearchBar";
-import { GoSun } from "react-icons/go";
+import { GoSun, GoMoon } from "react-icons/go";
 import { AiOutlineMenu } from "react-icons/ai";
 import { Righteous } from "next/font/google";
 import { useState } from "react";
@@ -14,10 +14,15 @@ const righteous = Righteous({
 });
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(true);
+  const [theme, setTheme] = useState("light");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (
@@ -36,9 +41,18 @@ export default function Navbar() {
         <Link href={"/"}>Categorias</Link>
         <Link href={"/"}>Acerca de</Link>
         <Link href={"/"}>Log in</Link>
-        <GoSun />
+        {theme === "light" ? (
+          <GoSun onClick={toggleTheme} className={`${styles.themeIcon} ${styles.sun}`}/>
+        ) : (
+          <GoMoon onClick={toggleTheme} className={`${styles.themeIcon} ${styles.moon}`}/>
+        )}
       </div>
-      <button className={styles.navbarToggle} onClick={toggleMenu}>
+      <button
+        className={`${styles.navbarToggle} ${
+          isMenuOpen ? styles.navbarToggleActive : ""
+        }`}
+        onClick={toggleMenu}
+      >
         <AiOutlineMenu />
       </button>
     </nav>
