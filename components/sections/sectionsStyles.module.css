@@ -1,0 +1,10 @@
+.sectionName {
+  font-size: 35px;
+  margin: 0 0 1rem 2rem;
+}
+
+@media (max-width: 835px) {
+  .sectionName {
+    font-size: 25px;
+  }
+}
