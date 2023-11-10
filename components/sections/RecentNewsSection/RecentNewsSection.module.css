@@ -1,0 +1,107 @@
+.recentsNews {
+  padding: 20px; /* Adjust padding as needed */
+  background-color: #f5f5f5;
+  margin-top: 1rem;
+}
+
+.recentsNews h2 {
+  text-align: center;
+}
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers cards in the container */
+  gap: 20px; /* Space between cards */
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px; /* Fixed width, can be adjusted or made responsive */
+  margin-bottom: 20px;
+  overflow: hidden; /* Ensures the content doesn't overflow the rounded corners */
+}
+
+.cardImage img {
+  width: 100%; /* Makes image responsive */
+  height: auto; /* Keeps image aspect ratio */
+  display: block; /* Removes bottom space under image */
+}
+
+.cardCategories {
+  display: flex;
+  flex-wrap: nowrap; /* evita que las píldoras se envuelvan */
+  gap: 5px;
+  overflow-x: auto; /* activa el desplazamiento horizontal si el contenido excede el ancho del contenedor */
+  padding: 10px;
+  scrollbar-width: thin; /* ajusta el tamaño del scrollbar para Firefox */
+  scrollbar-color: #c0c0c0 #f0f0f0; /* colores para el scrollbar en Firefox */
+}
+
+/* Estilos para el scrollbar en Chrome, Edge y Safari */
+.cardCategories::-webkit-scrollbar {
+  height: 6px; /* altura del scrollbar */
+}
+
+.cardCategories::-webkit-scrollbar-track {
+  background: #f0f0f0; /* color de fondo de la trayectoria del scrollbar */
+}
+
+.cardCategories::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0; /* color del scrollbar en sí */
+  border-radius: 3px;
+}
+
+.cardCategories span {
+  white-space: nowrap; /* asegura que las píldoras de categoría no se rompan en líneas múltiples */
+  background-color: #4e5d6c;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8em;
+}
+
+.cardContent {
+  padding: 15px;
+}
+
+.cardContent h3 {
+  margin-top: 0;
+  color: #333; /* Dark grey color for the title */
+  font-size: 1.2em;
+}
+
+.cardContent p {
+  color: #666; /* Light grey color for the paragraph */
+  font-size: 1em;
+}
+
+.cardFooter {
+  padding: 10px;
+  background-color: #f8f8f8; /* Slight background for footer */
+  display: flex;
+  justify-content: space-between; /* Spaces out links */
+}
+
+.cardFooter a {
+  color: #0066cc; /* Link color */
+  text-decoration: none; /* Removes underline */
+  font-size: 0.9em;
+}
+
+.cardFooter a:hover {
+  text-decoration: underline; /* Underlines link on hover */
+}
+
+@media only screen and (max-width: 600px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%; /* Full width on mobile */
+  }
+}

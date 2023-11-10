@@ -1,15 +1,17 @@
-import Image from "next/image";
-import styles from "./page.module.css";
 import Navbar from "@/components/Navbar/Navbar";
 import Carousel from "@/components/Carousel/Carousel";
-import Sections from "@/components/sections/Sections";
+import RecentNewsSection from "@/components/sections/RecentNewsSection/RecentNewsSection";
+import CategoriesSection from "@/components/sections/CategoriesSection/CategoriesSection";
+import FeaturedArticlesSection from "@/components/sections/FeaturedArticlesSection/FeaturedArticlesSection";
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <Carousel />
-      <Sections />
+      <RecentNewsSection />
+      <CategoriesSection />
+      <FeaturedArticlesSection />
     </>
   );
 }

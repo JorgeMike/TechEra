@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se apilen verticalmente en pantallas pequeñas */
+  margin: 2rem auto; /* Centra el contenedor */
+  gap: 20px;
+  max-width: 1200px; /* O un máximo que prefieras */
+  padding: 0 1rem; /* Añade un poco de espacio en los lados */
+}
+
+.firstColumn {
+  flex: 1;
+}
+
+.secondColumn {
+  flex: 1;
+}
+
+.article {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.articleImage {
+  width: 100%;
+  max-height: 300px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+}
+
+.articleContent {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  padding: 20px;
+  border-radius: 0 0 15px 15px;
+}
+
+.articleContent p{
+  margin: 0;
+}
+
+.articleHorizontal {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #cecece;
+}
+
+.articleImageSmall {
+  width: 150px; /* or any other fixed size */
+  flex-shrink: 0;
+  border-radius: 5px;
+}
+
+.articleContentHorizontal {
+  flex: 1;
+}
+
+.articleImage,
+.articleImageSmall {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Apila los elementos verticalmente */
+  }
+}
+
+@media (max-width: 600px) {
+  .articleContent h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+  }
+  .articleContent p {
+    font-size: 15px;
+    margin: 0;
+  }
+
+  .articleContentHorizontal h3 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .articleContentHorizontal p {
+    font-size: 12px;
+  }
+}

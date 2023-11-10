@@ -1,7 +1,6 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
 import styles from "./carouselStyles.module.css";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
 
 export interface CarouselItemProps {
@@ -19,12 +18,6 @@ export default function CarouselItem({
   active,
   id,
 }: CarouselItemProps) {
-  const router = useRouter();
-
-  const handleRouter = (id: string) => {
-    router.push(`/${id}`);
-  };
-
   return (
     <div
       className={`carousel-item ${styles.imageContainer} ${
