@@ -1,5 +1,5 @@
 .recentsNews {
-  padding: 20px; /* Adjust padding as needed */
+  padding: 20px;
   background-color: #f5f5f5;
   margin-top: 1rem;
 }
@@ -9,53 +9,182 @@
 }
 
 .cardContainer {
+  /* Contenedor de cartas */
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centers cards in the container */
-  gap: 20px; /* Space between cards */
+  justify-content: center;
+  gap: 20px;
 }
 
 .card {
-  background: #fff;
+  /* Carta */
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px; /* Fixed width, can be adjusted or made responsive */
+  width: 300px;
   margin-bottom: 20px;
-  overflow: hidden; /* Ensures the content doesn't overflow the rounded corners */
+  overflow: hidden;
+  border: 1px solid #cecece;
+}
+
+.cardImage {
+  /* Contenedor de imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 0;
 }
 
 .cardImage img {
-  width: 100%; /* Makes image responsive */
-  height: auto; /* Keeps image aspect ratio */
-  display: block; /* Removes bottom space under image */
+  /* Imagen */
+  width: 95%;
+  height: 200px;
+  display: block;
+  border-radius: 10px;
+}
+
+.cardContent {
+  /* contenedor de titulo y descripcion */
+  padding: 5px 15px 0 15px;
+  height: 155px;
+}
+
+.cardContent h3 {
+  /* Titulo de la carta */
+  color: #333;
+  font-size: 1.25em;
+}
+
+.cardContent p {
+  /* Descripcion */
+  color: #5f5f5f;
+  font-size: 1em;
 }
 
 .cardCategories {
+  /* Contenedor de categorias */
   display: flex;
-  flex-wrap: nowrap; /* evita que las píldoras se envuelvan */
+  flex-wrap: nowrap;
   gap: 5px;
-  overflow-x: auto; /* activa el desplazamiento horizontal si el contenido excede el ancho del contenedor */
+  overflow-x: auto;
   padding: 10px;
-  scrollbar-width: thin; /* ajusta el tamaño del scrollbar para Firefox */
-  scrollbar-color: #c0c0c0 #f0f0f0; /* colores para el scrollbar en Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 #f0f0f0;
 }
 
-/* Estilos para el scrollbar en Chrome, Edge y Safari */
 .cardCategories::-webkit-scrollbar {
-  height: 6px; /* altura del scrollbar */
+  height: 5px;
 }
 
 .cardCategories::-webkit-scrollbar-track {
-  background: #f0f0f0; /* color de fondo de la trayectoria del scrollbar */
+  background: #f0f0f0;
 }
 
 .cardCategories::-webkit-scrollbar-thumb {
-  background-color: #c0c0c0; /* color del scrollbar en sí */
+  background-color: #dfdfdf;
   border-radius: 3px;
 }
 
 .cardCategories span {
-  white-space: nowrap; /* asegura que las píldoras de categoría no se rompan en líneas múltiples */
+  /* Pildora de categoria */
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  border: 1px solid #cecece;
+}
+
+/* Estilos del footer */
+.cardFooter {
+  padding: 20px 20px 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  text-align: center;
+}
+
+.cardFooter:before {
+  content: "";
+  display: block;
+  border-top: 1px solid #cecece;
+  width: 70%;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.cardFooter:after {
+  content: "";
+  display: block;
+  border-left: 1px solid #cecece; /* Estilo de la línea */
+  height: 50%; /* Ajustar según la altura deseada */
+  position: absolute;
+  top: 30%;
+  left: 50%; /* Coloca la línea en el medio */
+}
+
+.cardFooter a {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.9em;
+  position: relative;
+}
+
+.cardFooter a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 600px) {
+  .cardContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* .card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.cardImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.cardCategories {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+  overflow-x: auto;
+  padding: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 #f0f0f0;
+}
+
+Estilos para el scrollbar en Chrome, Edge y Safari
+.cardCategories::-webkit-scrollbar {
+  height: 6px;
+}
+
+.cardCategories::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.cardCategories::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0;
+  border-radius: 3px;
+}
+
+.cardCategories span {
+  white-space: nowrap;
   background-color: #4e5d6c;
   color: #fff;
   padding: 5px 10px;
@@ -69,30 +198,30 @@
 
 .cardContent h3 {
   margin-top: 0;
-  color: #333; /* Dark grey color for the title */
+  color: #333;
   font-size: 1.2em;
 }
 
 .cardContent p {
-  color: #666; /* Light grey color for the paragraph */
+  color: #666;
   font-size: 1em;
 }
 
 .cardFooter {
   padding: 10px;
-  background-color: #f8f8f8; /* Slight background for footer */
+  background-color: #f8f8f8;
   display: flex;
-  justify-content: space-between; /* Spaces out links */
+  justify-content: space-between;
 }
 
 .cardFooter a {
-  color: #0066cc; /* Link color */
-  text-decoration: none; /* Removes underline */
+  color: #0066cc;
+  text-decoration: none;
   font-size: 0.9em;
 }
 
 .cardFooter a:hover {
-  text-decoration: underline; /* Underlines link on hover */
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 600px) {
@@ -102,6 +231,7 @@
   }
 
   .card {
-    width: 90%; /* Full width on mobile */
+    width: 90%;
   }
 }
+ */

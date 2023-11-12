@@ -38,7 +38,7 @@ export default function Navbar() {
         }`}
       >
         <SearchBar />
-        <Link href={"/"}>Categorias</Link>
+        <Link href={"/categorias"}>Categorias</Link>
         <Link href={"/"}>Acerca de</Link>
         <Link href={"/"}>Log in</Link>
         {theme === "light" ? (

@@ -6,10 +6,12 @@ export default function FeaturedArticlesSection() {
       <div className={styles.firstColumn}>
         {recenteNews.map((item, index) => (
           <div className={styles.article} key={index}>
-            <img src={item.image.src} className={styles.articleImage} />
-            <div className={styles.articleContent}>
-              <h3>{item.title}</h3>
-              <p>{item.subtitle}</p>
+            <div className={styles.articleImageContainer}>
+              <img src={item.image.src} className={styles.articleImage} />
+              <div className={styles.articleContent}>
+                <h3>{item.title}</h3>
+                <p>{item.subtitle}</p>
+              </div>
             </div>
           </div>
         ))}
@@ -17,14 +19,21 @@ export default function FeaturedArticlesSection() {
       <div className={styles.secondColumn}>
         {recenteNews.map((item, index) => (
           <div className={styles.articleHorizontal} key={index}>
-            <img
-              src={item.image.src}
-              alt="hola"
-              className={styles.articleImageSmall}
-            />
-            <div className={styles.articleContentHorizontal}>
-              <h3>{item.title}</h3>
-              <p>{item.subtitle}</p>
+            <div className={styles.articleUpperSection}>
+              <img
+                src={item.image.src}
+                alt="hola"
+                className={styles.articleImageSmall}
+              />
+              <div className={styles.articleContentHorizontal}>
+                <h4>{item.title}</h4>
+                <p>{item.subtitle}</p>
+              </div>
+            </div>
+            <div className={styles.cardCategories}>
+              {item.categories.map((item, index) => (
+                <span key={index}>{item}</span>
+              ))}
             </div>
           </div>
         ))}

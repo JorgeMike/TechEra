@@ -1,23 +1,32 @@
 .container {
   display: flex;
-  flex-wrap: wrap; /* Permite que los elementos se apilen verticalmente en pantallas pequeñas */
-  margin: 2rem auto; /* Centra el contenedor */
+  flex-wrap: wrap;
+  margin: 2rem auto;
   gap: 20px;
-  max-width: 1200px; /* O un máximo que prefieras */
-  padding: 0 1rem; /* Añade un poco de espacio en los lados */
+  max-width: 1200px;
+  padding: 0 1rem;
 }
 
-.firstColumn {
-  flex: 1;
-}
-
+.firstColumn,
 .secondColumn {
   flex: 1;
 }
 
+/* Primera columna */
+
 .article {
   position: relative;
+  border: 1px solid #cecece;
+  border-radius: 20px;
+  padding: 15px;
   margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.articleImageContainer {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
 .articleImage {
@@ -33,39 +42,69 @@
   position: absolute;
   bottom: 0;
   left: 0;
+  right: 0;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  width: 100%;
   padding: 20px;
   border-radius: 0 0 15px 15px;
 }
 
-.articleContent p{
+.articleContent p {
   margin: 0;
 }
 
+/* Segunda columna */
+
 .articleHorizontal {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #cecece;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.articleUpperSection {
+  display: flex; 
   align-items: center;
   gap: 10px;
-  margin-bottom: 22px;
-  border-bottom: 1px solid #cecece;
+  width: 100%;
 }
 
 .articleImageSmall {
-  width: 150px; /* or any other fixed size */
+  width: 130px;
+  height: 130px;
   flex-shrink: 0;
   border-radius: 5px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .articleContentHorizontal {
   flex: 1;
 }
+.articleContentHorizontal p {
+  margin: 0;
+}
 
-.articleImage,
-.articleImageSmall {
-  max-width: 100%;
-  height: auto;
+.cardCategories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding-top: 10px;
+  width: 100%;
+  justify-content: baseline;
+}
+
+.cardCategories span {
+  /* Pildora de categoria */
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  border: 1px solid #cecece;
 }
 
 /* Media queries para pantallas más pequeñas */
@@ -95,3 +134,4 @@
     font-size: 12px;
   }
 }
+

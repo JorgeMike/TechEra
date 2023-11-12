@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: rgba(0, 0, 0, 0);
-  margin: 1rem 4rem;
+  padding: 1rem 4rem;
 }
 
 .navbarBrand a {
@@ -76,7 +76,7 @@
   }
 
   .navbarToggle {
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     border: none;
     display: inline-block;
     transition: all 0.4s ease;
@@ -93,10 +93,6 @@
 
   .navbarItemsActive {
     display: flex;
-  }
-
-  .navbar {
-    margin: 0.5rem 1rem;
   }
 }
 

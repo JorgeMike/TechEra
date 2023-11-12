@@ -1,6 +1,5 @@
-import imagen from "../../../public/images/portadaCinco.jpg";
 import styles from "./categoriesSectionStyles.module.css";
-import { categories } from "../../../src/Arrays";
+import { popularCategories } from "../../../src/Arrays";
 import CategoryCard from "./CategoryCard";
 
 export default function CategoriesSection() {
@@ -8,7 +7,7 @@ export default function CategoriesSection() {
     <div>
       <h2 className="text-center mt-3">Categorias populares</h2>
       <section className={styles.categoriesSection}>
-        {categories.map((item, index) => (
+        {popularCategories.map((item, index) => (
           <CategoryCard
             key={index}
             image={item.imageUrl}

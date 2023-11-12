@@ -9,6 +9,8 @@ import imagen2 from "../public/images/articulos/articuloDos.jpg";
 import imagen3 from "../public/images/articulos/articuloTres.jpg";
 import imagen4 from "../public/images/portadaSeis.jpg";
 
+import { RiRobot2Line } from "react-icons/ri";
+
 export const carouselImages: CarouselItemProps[] = [
   {
     image: portadaUno,
@@ -75,7 +77,7 @@ export const recenteNews = [
   },
 ];
 
-export const categories = [
+export const popularCategories = [
   {
     text: "Hardware",
     imageUrl: "https://s1.significados.com/foto/hardware.jpg",
@@ -111,24 +113,60 @@ export const categories = [
       "https://grupocmm.com/wp-content/uploads/2018/09/final_cb_0086.0-1024x744.jpg",
     link: "/categoria/gadgets",
   },
-  /* {
-    text: "Redes y Seguridad",
-    imageUrl: "url_to_network_security_image.jpg",
-    link: "/categoria/redes-seguridad",
+];
+
+export const categories = [
+  {
+    id: 1,
+    name: "Robótica",
+    description:
+      "Explora las últimas tendencias y desarrollos en el mundo de la robótica, desde drones hasta sistemas autónomos.",
   },
   {
-    text: "Robótica",
-    imageUrl: "url_to_robotics_image.jpg",
-    link: "/categoria/robotica",
+    id: 2,
+    name: "Realidad Virtual",
+    description:
+      "Sumérgete en el fascinante mundo de la realidad virtual, descubriendo las nuevas tecnologías y aplicaciones en diferentes campos.",
   },
   {
-    text: "Innovación y Startups",
-    imageUrl: "url_to_innovation_startups_image.jpg",
-    link: "/categoria/innovacion-startups",
+    id: 3,
+    name: "Inteligencia Artificial",
+    description:
+      "Descubre cómo la inteligencia artificial está transformando industrias y revolucionando la tecnología moderna.",
   },
   {
-    text: "Tecnología Verde",
-    imageUrl: "url_to_green_tech_image.jpg",
-    link: "/categoria/tecnologia-verde",
-  }, */
+    id: 4,
+    name: "Computación Cuántica",
+    description:
+      "Adéntrate en el complejo mundo de la computación cuántica y su potencial para cambiar el panorama tecnológico.",
+  },
+  {
+    id: 5,
+    name: "Ciberseguridad",
+    description:
+      "Mantente al día con las últimas estrategias y tecnologías en ciberseguridad para proteger datos y sistemas.",
+  },
+  {
+    id: 6,
+    name: "Internet de las Cosas",
+    description:
+      "Descubre cómo los dispositivos conectados están creando redes inteligentes en hogares y empresas.",
+  },
+  {
+    id: 7,
+    name: "Blockchain",
+    description:
+      "Explora la tecnología de blockchain y cómo está impulsando la innovación en finanzas y más allá.",
+  },
+  {
+    id: 8,
+    name: "5G y Conectividad",
+    description:
+      "Conoce los avances en tecnología 5G y su impacto en la comunicación y la interconexión de dispositivos.",
+  },
+  {
+    id: 9,
+    name: "Energías Renovables",
+    description: "Investiga las últimas innovaciones y desarrollos en energías renovables, incluyendo solar, eólica, y otras formas de energía sostenible."
+  }
 ];

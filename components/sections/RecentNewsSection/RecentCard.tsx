@@ -15,18 +15,18 @@ export default function RecentCard(information: CardProps) {
       <div className={styles.cardImage}>
         <Image src={information.image} alt="imagen" />
       </div>
+      <div className={styles.cardContent}>
+        <h3>{information.title}</h3>
+        <p>{information.subtitle}</p>
+      </div>
       <div className={styles.cardCategories}>
         {information.categories.map((item, index) => (
           <span key={index}>{item}</span>
         ))}
       </div>
-      <div className={styles.cardContent}>
-        <h3>{information.title}</h3>
-        <p>{information.subtitle}</p>
-      </div>
       <div className={styles.cardFooter}>
         <a href="">Seguir leyendo</a>
-        <a href="">Ver mas parecidos</a>
+        <a href="">Más parecidos</a>
       </div>
     </div>
   );
