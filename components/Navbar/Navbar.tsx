@@ -39,12 +39,18 @@ export default function Navbar() {
       >
         <SearchBar />
         <Link href={"/categorias"}>Categorias</Link>
-        <Link href={"/"}>Acerca de</Link>
-        <Link href={"/"}>Log in</Link>
+        <Link href={"/about"}>Acerca de</Link>
+        <Link href={"/login"}>Log in</Link>
         {theme === "light" ? (
-          <GoSun onClick={toggleTheme} className={`${styles.themeIcon} ${styles.sun}`}/>
+          <GoSun
+            onClick={toggleTheme}
+            className={`${styles.themeIcon} ${styles.sun}`}
+          />
         ) : (
-          <GoMoon onClick={toggleTheme} className={`${styles.themeIcon} ${styles.moon}`}/>
+          <GoMoon
+            onClick={toggleTheme}
+            className={`${styles.themeIcon} ${styles.moon}`}
+          />
         )}
       </div>
       <button

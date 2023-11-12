@@ -4,9 +4,9 @@ import Footer from "../Footer/Footer";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{backgroundColor: "#f4f4f4"}}>
+    <div style={{ backgroundColor: "#f4f4f4" }}>
       <Navbar />
-      {children}
+      <div style={{minHeight: "70.8vh"}}>{children}</div>
       <Footer />
     </div>
   );

@@ -167,6 +167,7 @@ export const categories = [
   {
     id: 9,
     name: "Energías Renovables",
-    description: "Investiga las últimas innovaciones y desarrollos en energías renovables, incluyendo solar, eólica, y otras formas de energía sostenible."
-  }
+    description:
+      "Investiga las últimas innovaciones y desarrollos en energías renovables, incluyendo solar, eólica, y otras formas de energía sostenible.",
+  },
 ];

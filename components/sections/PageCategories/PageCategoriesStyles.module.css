@@ -1,43 +1,42 @@
-/* Estilos para el contenedor principal */
 .categoriesContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Espacio entre cada categoría */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
   padding: 20px;
-  background-color: #f4f4f4; /* Fondo gris claro para el contenedor */
+  background-color: #f4f4f4;
 }
 
-/* Estilos generales del contenedor de cada categoría */
 .category {
-  background-color: #ffffff; /* Fondo blanco para cada categoría */
-  border: 1px solid #e0e0e0; /* Borde sutil */
+  display: flex;
+  align-items: center;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 300px; /* Ancho fijo para cada categoría */
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.5s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+  border: 1px solid #cecece;
+  padding: 15px;
+  transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-/* Efecto al pasar el mouse sobre las categorías */
 .category:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  background-color: #e8e8e8; /* Cambio de color de fondo al hacer hover */
+  transform: translateY(-5px);
 }
 
-/* Estilos para el encabezado de cada categoría */
-.category h3 {
-  color: #003366; /* Azul oscuro para el texto del encabezado */
-  margin-bottom: 15px;
-  font-size: 1.4em;
+.category:hover {
+  transform: translateY(-5px);
 }
 
-/* Estilos para la descripción de cada categoría */
-.category p {
-  color: #333333; /* Gris carbón para el texto de la descripción */
-  font-size: 1em;
-  line-height: 1.4; /* Espaciado entre líneas para mejorar la legibilidad */
+.icon {
+  font-size: 50px;
+  color: #007bff;
+  margin-right: 15px; /* Añade un margen a la derecha */
+}
+
+.content h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.content p {
+  font-size: 0.9rem;
+  color: #666;
 }
