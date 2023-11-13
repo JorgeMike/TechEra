@@ -39,6 +39,7 @@
 .navbarSearchBar input {
   width: 200px;
   border: 0;
+  background-color: #f4f4f4;
   border-bottom: 1px solid #cecece;
 }
 
@@ -57,7 +58,7 @@
 @media (max-width: 835px) {
   .navbarItems {
     position: absolute;
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     width: 100%;
     z-index: 10;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -86,7 +87,7 @@
   }
 
   .navbarToggleActive {
-    background-color: #efefef;
+    background-color: #f4f4f4;
     color: #4d4d4d;
     transform: scale(1.4);
   }
@@ -109,6 +110,12 @@
 
   .navbarToggle {
     display: none;
+  }
+}
+
+@media (max-width: 400px){
+  .navbar{
+    padding: 1rem 2rem;
   }
 }
 

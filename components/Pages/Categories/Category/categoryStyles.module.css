@@ -1,0 +1,262 @@
+
+/* SidebarLeft.module.css */
+.sidebarLeft {
+  width: 350px;
+  padding: 20px;
+}
+
+.dropdown {
+  margin-bottom: 20px;
+}
+
+.dropdown label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.dropdown select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.fieldset {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.fieldset legend {
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.checkbox {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.checkbox label {
+  margin-left: 5px;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.button:hover {
+  background-color: #003d82;
+}
+
+
+/* Aqui empiezan los estilos del main */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  width: 100%;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 16px;
+  color: #666;
+}
+
+.articleContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.article {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.articleContent {
+  padding: 15px 15px 0 15px;
+}
+.articleContent a {
+  text-decoration: none;
+}
+
+.articleContent h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.articleContent p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+  overflow-x: auto;
+  padding: 10px 10px 15px 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 #f0f0f0;
+}
+
+.categoryPill {
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  background-color: #007bff;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.categoryPill:hover {
+  transform: translateY(-2px);
+}
+
+.articleFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.articleFooter p {
+  margin: 0;
+  color: #5d5d5d;
+}
+
+.authorInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.authorInfo img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.likeCounter {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.likeCounter span {
+  font-size: 14px;
+}
+
+/* Estilos generales para la barra lateral derecha*/
+.sidebarRight {
+  width: 300px;
+  background-color: #f4f4f4;
+  padding: 20px 5px;
+  height: 100vh;
+  overflow-y: auto;
+  float: right;
+}
+
+/* Estilos para el encabezado */
+.sidebarRight h3 {
+  margin-top: 0;
+  color: #333333;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Estilos para la navegación */
+.sidebarRight nav ul {
+  list-style-type: none;
+  padding: 0;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.sidebarRight nav ul a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333333;
+  padding: 10px 0;
+}
+
+.sidebarRight .icon {
+  margin: 0 10px 0 15px;
+  font-size: 1.2em;
+}
+
+.sidebarRight .name {
+  font-size: 1em;
+}
+
+.sidebarRight nav ul:hover {
+  background-color: #dddddd;
+}
+
+.active {
+  background-color: #dddddd;
+}
+
+/* Estilos para el contenido central */
+@media (max-width: 700px) {
+  .sidebarRight {
+    display: none;
+  }
+}

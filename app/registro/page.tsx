@@ -1,12 +1,10 @@
 import Layout from "@/components/Layout/Layout";
-import Login from "@/components/Login/Login";
+import Registro from "@/components/Login/Registro/Registro";
 
 export default function page() {
   return (
     <Layout>
-      <div className="container">
-        <Login />
-      </div>
+      <Registro />
     </Layout>
   );
 }

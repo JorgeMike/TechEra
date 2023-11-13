@@ -8,8 +8,15 @@ import imagen1 from "../public/images/articulos/articuloUno.jpg";
 import imagen2 from "../public/images/articulos/articuloDos.jpg";
 import imagen3 from "../public/images/articulos/articuloTres.jpg";
 import imagen4 from "../public/images/portadaSeis.jpg";
+import { StaticImageData } from "next/image";
 
-import { RiRobot2Line } from "react-icons/ri";
+export interface RecentNew {
+  image: StaticImageData;
+  title: string;
+  subtitle: string;
+  categories: string[];
+  id: string;
+}
 
 export const carouselImages: CarouselItemProps[] = [
   {
@@ -43,7 +50,7 @@ export const carouselImages: CarouselItemProps[] = [
   },
 ];
 
-export const recenteNews = [
+export const recenteNews: RecentNew[] = [
   {
     image: imagen1,
     title: "Computación Cuántica: El Futuro es Ahora",

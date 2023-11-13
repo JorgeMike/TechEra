@@ -1,6 +1,16 @@
 import Layout from "@/components/Layout/Layout";
-import React from "react";
+import CategoryContent from "@/components/Pages/Categories/Category/CategoryContent";
+import SidebarLeft from "@/components/Pages/Categories/Category/SidebarLeft";
+import SidebarRight from "@/components/Pages/Categories/Category/SidebarRight";
 
-export default function page({ params }: { params: { categoria: string } }) {
-  return <Layout>page: {params.categoria}</Layout>;
+export default function Page({ params }: { params: { categoria: string } }) {
+  return (
+    <Layout>
+      <div style={{ display: "flex" }}>
+        <SidebarLeft currentCategory={params.categoria} />
+        <CategoryContent currentCategory={params.categoria} />
+        <SidebarRight currentCategory={params.categoria} />
+      </div>
+    </Layout>
+  );
 }
