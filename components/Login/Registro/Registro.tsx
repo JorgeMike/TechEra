@@ -1,38 +1,54 @@
-// Registro.js
 import React from "react";
-import styles from "./registroStyles.module.css";
+import styles from "../loginstyles.module.css";
 import Link from "next/link";
 
 export default function Registro() {
   return (
-    <div className={styles.registroContainer}>
-      <h2>Registro</h2>
-      <form
-        className={styles.form}
-        action="/tuEndpointDeRegistro"
-        method="post"
-      >
-        <div className={styles.formGroup}>
-          <label htmlFor="nombre">Nombre de usuario:</label>
-          <input type="text" id="nombre" name="nombre" required />
+    <div className={styles.container}>
+      <div className={styles.loginContainer}>
+        <h2>Registro de usuario</h2>
+        <div className={styles.formContainer}>
+          <form>
+            <div className="mb-3">
+              <label htmlFor="usuario" className="form-label">
+                Nombre de usuario:
+              </label>
+              <input type="text" className="form-control" id="usuario" />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="correo" className="form-label">
+                Correo:
+              </label>
+              <input type="email" className="form-control" id="correo" />
+            </div>
+            <div className="mb-3">
+              <label htmlFor="password" className="form-label">
+                Contraseña:
+              </label>
+              <input type="password" className="form-control" id="password" />
+            </div>
+            <div className="mb-3 form-check">
+              <input
+                type="checkbox"
+                className="form-check-input"
+                id="exampleCheck1"
+              />
+              <label className="form-check-label" htmlFor="exampleCheck1">
+                Estoy de acuerdo con los{" "}
+                <Link href={"/about"}>términos y condiciones</Link>
+              </label>
+            </div>
+            <div className="mb-3 d-flex justify-content-center">
+              <button type="submit" className="btn btn-primary">
+                Registrarme
+              </button>
+            </div>
+          </form>
         </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="correo">Correo:</label>
-          <input type="email" id="correo" name="correo" required />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="contrasena">Contraseña:</label>
-          <input type="password" id="contrasena" name="contrasena" required />
-        </div>
-        <div className={styles.formGroup}>
-          <button type="submit" className={styles.submitButton}>
-            Registrarse
-          </button>
-        </div>
-      </form>
-      <p className={styles.publisherText}>
-        ¿Eres publicador?
-        <Link href={"/registro/publicador"}>Regístrate aquí</Link>
+      </div>
+      <p>
+        Eres un publicador?{" "}
+        <Link href={"/registro/publicador"}>Registrate aqui</Link>
       </p>
     </div>
   );
