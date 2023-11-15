@@ -1,14 +1,13 @@
-import "./dashboardStyles.css";
 
 export default function SidebarRightDashboard() {
   return (
     <section className="payment-section">
       <h2>Notificaciones</h2>
       <div className="payment-section-header">
-        <p>
+{/*         <p>
           Mantente atento de las notificaciones sobre la plataforma o avisos del
           administrador
-        </p>
+        </p> */}
         <div>
           {/* <button className="card-button mastercard">
             <svg
@@ -99,7 +98,7 @@ export default function SidebarRightDashboard() {
             <h3>Publicacion</h3>
             <div>
               <span>
-                Tu publicacion "Apple watch" ha sido acceptada y publicada
+                Tu publicacion Apple watch ha sido acceptada y publicada
               </span>
               <button className="icon-button article">
                 <i className="ph-caret-right-bold"></i>

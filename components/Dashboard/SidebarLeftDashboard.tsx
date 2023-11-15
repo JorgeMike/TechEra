@@ -1,5 +1,4 @@
 import Link from "next/link";
-import "./dashboardStyles.css";
 
 export default function SidebarLeftDashboard() {
   const route = "/usuario/publicador";
@@ -18,13 +17,17 @@ export default function SidebarLeftDashboard() {
           <i className="ph-check-square"></i>
           <span>Mis Borradores</span>
         </Link>
-        <Link href={`${route}/calendario`}>
+        {/*         <Link href={`${route}/calendario`}>
           <i className="ph-swap"></i>
           <span>Calendario</span>
-        </Link>
+        </Link> */}
         <Link href={`${route}/analiticas`}>
           <i className="ph-file-text"></i>
           <span>Analíticas</span>
+        </Link>
+        <Link href={`${route}/crear-articulo`}>
+          <i className="ph-file-text"></i>
+          <span>Crear articulo</span>
         </Link>
         {/*        <a href="#">
           <i className="ph-globe"></i>

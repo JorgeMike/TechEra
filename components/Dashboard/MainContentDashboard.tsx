@@ -1,5 +1,3 @@
-import "./dashboardStyles.css";
-
 export default function MainContentDashboard() {
   return (
     <>

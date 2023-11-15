@@ -1,6 +1,5 @@
 "use client";
 import { useRouter } from "next/navigation";
-import "./dashboardStyles.css";
 import { Righteous } from "next/font/google";
 import Link from "next/link";
 

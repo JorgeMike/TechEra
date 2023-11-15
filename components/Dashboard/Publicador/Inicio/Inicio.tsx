@@ -1,102 +1,39 @@
-import "../../dashboardStyles.css";
+import Image from "next/image";
+import imagen from "@/public/images/articulos/articuloUno.jpg";
 
 export default function Inicio() {
   return (
     <>
       <section className="service-section">
+        <h2>Inicio</h2>
         <h2>Mi articulo mas recientes</h2>
-        {/*         <div className="service-section-header">
-          <div className="search-field">
-            <i className="ph-magnifying-glass"></i>
-            <input type="text" placeholder="Account number" />
-          </div>
-          <div className="dropdown-field">
-            <select>
-              <option>Home</option>
-              <option>Work</option>
-            </select>
-            <i className="ph-caret-down"></i>
-          </div>
-          <button className="flat-button">Search</button>
-        </div> */}
-        {/*         <div className="mobile-only">
-          <button className="flat-button">Toggle search</button>
-        </div> */}
-        <div className="tiles">
-          <article className="tile">
+        <div className="tile-container">
+          <article className="large-tile">
+            <Image src={imagen} alt="imagen" className="tile-image" />
             <div className="tile-header">
               <i className="ph-lightning-light"></i>
               <h3>
-                <span>Electricity</span>
-                <span>UrkEnergo LTD.</span>
+                <span>Nombre del articulo</span>
+                <span>Descripcion del articulo</span>
               </h3>
             </div>
             <a href="#">
-              <span>Go to service</span>
+              <span>Ver articulo</span>
               <span className="icon-button">
                 <i className="ph-caret-right-bold"></i>
               </span>
             </a>
           </article>
-{/*           <article className="tile">
-            <div className="tile-header">
-              <i className="ph-fire-simple-light"></i>
-              <h3>
-                <span>Heating Gas</span>
-                <span>Gazprom UA</span>
-              </h3>
-            </div>
-            <a href="#">
-              <span>Go to service</span>
-              <span className="icon-button">
-                <i className="ph-caret-right-bold"></i>
-              </span>
-            </a>
-          </article>
-          <article className="tile">
-            <div className="tile-header">
-              <i className="ph-file-light"></i>
-              <h3>
-                <span>Tax online</span>
-                <span>Kharkov 62 str.</span>
-              </h3>
-            </div>
-            <a href="#">
-              <span>Go to service</span>
-              <span className="icon-button">
-                <i className="ph-caret-right-bold"></i>
-              </span>
-            </a>
-          </article> */}
         </div>
         <div className="service-section-footer">
-          <p>
-            Services are paid according to the current state of the currency and
-            tariff.
-          </p>
+          <p>Este es tu articulo mas reciente</p>
         </div>
       </section>
       <section className="service-section">
         <h2>Mi borrador mas reciente</h2>
-        {/*         <div className="service-section-header">
-          <div className="search-field">
-            <i className="ph-magnifying-glass"></i>
-            <input type="text" placeholder="Account number" />
-          </div>
-          <div className="dropdown-field">
-            <select>
-              <option>Home</option>
-              <option>Work</option>
-            </select>
-            <i className="ph-caret-down"></i>
-          </div>
-          <button className="flat-button">Search</button>
-        </div> */}
-        {/*         <div className="mobile-only">
-          <button className="flat-button">Toggle search</button>
-        </div> */}
-        <div className="tiles">
-          <article className="tile">
+        <div className="tile-container">
+          <article className="large-tile">
+            <Image src={imagen} alt="imagen" className="tile-image" />
             <div className="tile-header">
               <i className="ph-lightning-light"></i>
               <h3>
@@ -105,120 +42,76 @@ export default function Inicio() {
               </h3>
             </div>
             <a href="#">
-              <span>Go to service</span>
+              <span>Seguir editando</span>
               <span className="icon-button">
                 <i className="ph-caret-right-bold"></i>
               </span>
             </a>
           </article>
-{/*           <article className="tile">
-            <div className="tile-header">
-              <i className="ph-fire-simple-light"></i>
-              <h3>
-                <span>Heating Gas</span>
-                <span>Gazprom UA</span>
-              </h3>
-            </div>
-            <a href="#">
-              <span>Go to service</span>
-              <span className="icon-button">
-                <i className="ph-caret-right-bold"></i>
-              </span>
-            </a>
-          </article>
-          <article className="tile">
-            <div className="tile-header">
-              <i className="ph-file-light"></i>
-              <h3>
-                <span>Tax online</span>
-                <span>Kharkov 62 str.</span>
-              </h3>
-            </div>
-            <a href="#">
-              <span>Go to service</span>
-              <span className="icon-button">
-                <i className="ph-caret-right-bold"></i>
-              </span>
-            </a>
-          </article> */}
         </div>
         <div className="service-section-footer">
-          <p>
-            Services are paid according to the current state of the currency and
-            tariff.
-          </p>
+          <p>Este es el borrador mas reciente que has editado</p>
         </div>
       </section>
       <section className="service-section">
-        <h2>Proximas fechas Importantes</h2>
-        {/*         <div className="service-section-header">
-          <div className="search-field">
-            <i className="ph-magnifying-glass"></i>
-            <input type="text" placeholder="Account number" />
-          </div>
-          <div className="dropdown-field">
-            <select>
-              <option>Home</option>
-              <option>Work</option>
-            </select>
-            <i className="ph-caret-down"></i>
-          </div>
-          <button className="flat-button">Search</button>
-        </div> */}
-        {/*         <div className="mobile-only">
-          <button className="flat-button">Toggle search</button>
-        </div> */}
+        <h2>Notificaciones importantes</h2>
         <div className="tiles">
           <article className="tile">
             <div className="tile-header">
               <i className="ph-lightning-light"></i>
               <h3>
-                <span>Electricity</span>
-                <span>UrkEnergo LTD.</span>
+                <span>Examen Unidad 2</span>
+                <span>
+                  Estimados alumnos les recurdo que el viernes 17 de noviembre
+                  presentaran su examen de la segunda unidad{" "}
+                </span>
               </h3>
             </div>
-            <a href="#">
+            {/*             <a href="#">
               <span>Go to service</span>
               <span className="icon-button">
                 <i className="ph-caret-right-bold"></i>
               </span>
-            </a>
+            </a> */}
           </article>
           <article className="tile">
             <div className="tile-header">
               <i className="ph-fire-simple-light"></i>
               <h3>
-                <span>Heating Gas</span>
-                <span>Gazprom UA</span>
+                <span>Aviso de clase</span>
+                <span>El lunes 20 de noviembre se supende la clase</span>
               </h3>
             </div>
-            <a href="#">
+            {/*             <a href="#">
               <span>Go to service</span>
               <span className="icon-button">
                 <i className="ph-caret-right-bold"></i>
               </span>
-            </a>
+            </a> */}
           </article>
           <article className="tile">
             <div className="tile-header">
               <i className="ph-file-light"></i>
               <h3>
-                <span>Tax online</span>
-                <span>Kharkov 62 str.</span>
+                <span>Evento</span>
+                <span>
+                  El dia 24 de noviembre haba un evento en la sala de
+                  conferencias
+                </span>
               </h3>
             </div>
-            <a href="#">
+            {/*             <a href="#">
               <span>Go to service</span>
               <span className="icon-button">
                 <i className="ph-caret-right-bold"></i>
               </span>
-            </a>
+            </a> */}
           </article>
         </div>
         <div className="service-section-footer">
           <p>
-            Services are paid according to the current state of the currency and
-            tariff.
+            Mantente al pendiente de esta seccion pues te avisara de fechas
+            imortantes
           </p>
         </div>
       </section>

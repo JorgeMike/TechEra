@@ -3,6 +3,7 @@ import HeaderDashboard from "../Dashboard/HeaderDashboard";
 import SidebarLeftDashboard from "../Dashboard/SidebarLeftDashboard";
 import MainContentDashboard from "../Dashboard/MainContentDashboard";
 import SidebarRightDashboard from "../Dashboard/SidebarRightDashboard";
+import "../Dashboard/dashboardStyles.css"
 
 export default function Dashboard({ children }: { children: React.ReactNode }) {
   return (

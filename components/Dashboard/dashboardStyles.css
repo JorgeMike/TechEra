@@ -335,108 +335,6 @@ a {
   }
 }
 
-.tiles {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 1rem;
-  row-gap: 1rem;
-  margin-top: 1.25rem;
-  @media (max-width: 700px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.tile {
-  padding: 1rem;
-  border-radius: 8px;
-  background-color: var(--c-olive-500);
-  color: var(--c-gray-900);
-  min-height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  transition: 0.25s ease;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-
-  &:focus-within {
-    box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-olive-500);
-  }
-
-  &:nth-child(2) {
-    background-color: var(--c-green-500);
-    &:focus-within {
-      box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-green-500);
-    }
-  }
-  &:nth-child(3) {
-    background-color: var(--c-gray-300);
-    &:focus-within {
-      box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-gray-300);
-    }
-  }
-
-  a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: 600;
-
-    .icon-button {
-      color: inherit;
-      border-color: inherit;
-      &:hover,
-      &:focus {
-        background-color: transparent;
-        i {
-          transform: none;
-        }
-      }
-    }
-
-    &:focus {
-      box-shadow: none;
-    }
-
-    &:after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-  }
-}
-
-.tile-header {
-  display: flex;
-  align-items: center;
-  i {
-    font-size: 2.5em;
-  }
-
-  h3 {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.375;
-    margin-left: 0.5rem;
-    span:first-child {
-      font-weight: 600;
-    }
-
-    span:last-child {
-      font-size: 0.825em;
-      font-weight: 200;
-    }
-  }
-}
-
 .service-section {
   & > h2 {
     font-size: 1.5rem;
@@ -852,7 +750,7 @@ button {
 }
 
 .platform {
-  background-color: rgba(0, 26, 255, 0.1)
+  background-color: rgba(0, 26, 255, 0.1);
 }
 
 .class {
@@ -861,4 +759,214 @@ button {
 
 .article {
   background-color: rgba(0, 255, 13, 0.1);
+}
+
+/* Estilos de tiles */
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  column-gap: 1rem;
+  row-gap: 1rem;
+  margin-top: 1.25rem;
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.tile-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 1rem;
+  row-gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.tile {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--c-olive-500);
+  color: var(--c-gray-900);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: 0.25s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-olive-500);
+  }
+
+  &:nth-child(2) {
+    background-color: var(--c-green-500);
+    &:focus-within {
+      box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-green-500);
+    }
+  }
+  &:nth-child(3) {
+    background-color: var(--c-gray-300);
+    &:focus-within {
+      box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-gray-300);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+
+    .icon-button {
+      color: inherit;
+      border-color: inherit;
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        i {
+          transform: none;
+        }
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.large-tile {
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--c-olive-500);
+  color: var(--c-gray-900);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: 0.25s ease;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  &:focus-within {
+    box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-olive-500);
+  }
+
+  &:nth-child(2) {
+    background-color: var(--c-green-500);
+    &:focus-within {
+      box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-green-500);
+    }
+  }
+  &:nth-child(3) {
+    background-color: var(--c-gray-300);
+    &:focus-within {
+      box-shadow: 0 0 0 2px var(--c-gray-800), 0 0 0 4px var(--c-gray-300);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+
+    .icon-button {
+      color: inherit;
+      border-color: inherit;
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        i {
+          transform: none;
+        }
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.large-tile img {
+  width: 100%; /* Asegura que la imagen cubra todo el ancho del tile */
+  height: 100%; /* Asegura que la imagen cubra todo el alto del tile */
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Coloca la imagen detrás del contenido */
+}
+
+.large-tile .tile-header,
+.large-tile a {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+}
+
+.large-tile::before {
+  content: ""; /* Necesario para que se muestre el pseudoelemento */
+  position: absolute; /* Posicionamiento absoluto dentro de .tile */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3); /* Color negro con opacidad */
+  z-index: 1; /* Asegúrate de que esté entre la imagen y el contenido */
+}
+
+.tile-header {
+  display: flex;
+  align-items: center;
+  i {
+    font-size: 2.5em;
+  }
+
+  h3 {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.375;
+    margin-left: 0.5rem;
+    span:first-child {
+      font-weight: 600;
+    }
+
+    span:nth-child(2),
+    span:nth-child(3) {
+      font-size: 0.825rem;
+      font-weight: 200;
+    }
+  }
 }
