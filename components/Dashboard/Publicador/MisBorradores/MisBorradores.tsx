@@ -13,7 +13,7 @@ export default function MisBorradores() {
             <h3>
               <span>Nombre del articulo</span>
               <span>Descripcion del articulo</span>
-              <span>Fecha de publicacion: 15/Noviembre/2023</span>
+              <span>Estado: Borrador sin enviar</span>
             </h3>
           </div>
           <a href="#">
@@ -30,15 +30,15 @@ export default function MisBorradores() {
             <h3>
               <span>Nombre del articulo</span>
               <span>Descripcion del articulo</span>
-              <span>Fecha de publicacion: 15/Noviembre/2023</span>
+              <span>Estado: Enviado a revision</span>
             </h3>
           </div>
-          <a href="#">
+          {/*           <a href="#">
             <span>Seguir editando</span>
             <span className="icon-button">
               <i className="ph-caret-right-bold"></i>
             </span>
-          </a>
+          </a> */}
         </article>
         <article className="large-tile">
           <Image src={imagen} alt="imagen" className="tile-image" />
@@ -47,7 +47,7 @@ export default function MisBorradores() {
             <h3>
               <span>Nombre del articulo</span>
               <span>Descripcion del articulo</span>
-              <span>Fecha de publicacion: 15/Noviembre/2023</span>
+              <span>Estado: Con retroalimentacion</span>
             </h3>
           </div>
           <a href="#">
