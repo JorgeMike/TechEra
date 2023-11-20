@@ -1,42 +1,25 @@
 import Link from "next/link";
+import { ILink } from "../Layout/Dashboard";
 
-export default function SidebarLeftDashboard() {
-  const route = "/usuario/publicador";
+interface ISidebarLeftDashboard {
+  links: ILink[];
+  user: string;
+}
+
+export default function SidebarLeftDashboard({
+  links,
+  user,
+}: ISidebarLeftDashboard) {
+  const route = `/usuario/${user}`;
   return (
     <div className="app-body-navigation">
       <nav className="navigation">
-        <Link href={`${route}`}>
-          <i className="ph-browsers"></i>
-          <span>Inicio</span>
-        </Link>
-        <Link href={`${route}/mis-articulos`}>
-          <i className="ph-check-square"></i>
-          <span>Mis Artículos</span>
-        </Link>
-        <Link href={`${route}/mis-borradores`}>
-          <i className="ph-check-square"></i>
-          <span>Mis Borradores</span>
-        </Link>
-        {/*         <Link href={`${route}/calendario`}>
-          <i className="ph-swap"></i>
-          <span>Calendario</span>
-        </Link> */}
-        <Link href={`${route}/analiticas`}>
-          <i className="ph-file-text"></i>
-          <span>Analíticas</span>
-        </Link>
-        <Link href={`${route}/crear-articulo`}>
-          <i className="ph-file-text"></i>
-          <span>Crear articulo</span>
-        </Link>
-        {/*        <a href="#">
-          <i className="ph-globe"></i>
-          <span>Configuración</span>
-        </a>
-         <a href="#">
-          <i className="ph-clipboard-text"></i>
-          <span>Exchange</span>
-        </a> */}
+        {links.map((item, index) => (
+          <Link href={`${route}/${item.route}`} key={index}>
+            <i className="ph-browsers"></i>
+            <span>{item.name}</span>
+          </Link>
+        ))}
       </nav>
       <footer className="footer">
         <h1>

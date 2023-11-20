@@ -9,10 +9,10 @@ const righteous = Righteous({
   display: "swap",
 });
 
-export default function HeaderDashboard() {
+export default function HeaderDashboard({ user }: { user: string }) {
   const router = useRouter();
   const handleRouter = () => {
-    router.push("perfil");
+    router.push(`${user}/perfil`);
   };
   return (
     <header className="app-header">
