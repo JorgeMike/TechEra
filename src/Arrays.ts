@@ -9,6 +9,7 @@ import imagen2 from "../public/images/articulos/articuloDos.jpg";
 import imagen3 from "../public/images/articulos/articuloTres.jpg";
 import imagen4 from "../public/images/portadaSeis.jpg";
 import { StaticImageData } from "next/image";
+import { ILink } from "@/components/Layout/Dashboard";
 
 export interface RecentNew {
   image: StaticImageData;
@@ -177,4 +178,20 @@ export const categories = [
     description:
       "Investiga las últimas innovaciones y desarrollos en energías renovables, incluyendo solar, eólica, y otras formas de energía sostenible.",
   },
+];
+
+export const linksAdministrador: ILink[] = [
+  { name: "Inicio", route: "" },
+  { name: "Artículos", route: "articulos" },
+  { name: "Pendientes", route: "pendientes" },
+  { name: "Grupos", route: "grupos" },
+  { name: "Analíticas", route: "analiticas" },
+];
+
+export const linksPublicador: ILink[] = [
+  { name: "Inicio", route: "" },
+  { name: "Mis Articulos", route: "mis-articulos" },
+  { name: "Mis Borradores", route: "mis-borradores" },
+  { name: "Analiticas", route: "analiticas" },
+  { name: "Crear Articulo", route: "crear-articulo" },
 ];

@@ -1,18 +1,11 @@
-import Dashboard, { ILink } from "@/components/Layout/Dashboard";
-
-export const linksAdministrador: ILink[] = [
-  { name: "Inicio", route: "" },
-  { name: "Artículos", route: "articulos" },
-  { name: "Pendientes", route: "pendientes" },
-  { name: "Grupos", route: "grupos" },
-  { name: "Analíticas", route: "analiticas" },
-  /* { name: "Crear Artículo", route: "crear-articulo" }, */
-];
+import Inicio from "@/components/Dashboard/Publicador/Inicio/Inicio";
+import Dashboard from "@/components/Layout/Dashboard";
+import { linksAdministrador } from "@/src/Arrays";
 
 export default function page() {
   return (
     <Dashboard links={linksAdministrador} user="administrador">
-      <div>Administrador</div>
+      <Inicio user="administrador" />
     </Dashboard>
   );
 }

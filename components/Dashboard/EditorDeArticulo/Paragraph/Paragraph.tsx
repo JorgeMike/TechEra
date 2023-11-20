@@ -14,6 +14,7 @@ export default function Paragraph({
   onImageChange,
 }: ParagraphProps) {
   let content;
+  
   const manejarKeyDown = (event: KeyboardEvent<HTMLTextAreaElement>) => {
     if (event.key === "Enter") {
       event.preventDefault();

@@ -1,7 +1,6 @@
 import React from "react";
 import HeaderDashboard from "../Dashboard/HeaderDashboard";
 import SidebarLeftDashboard from "../Dashboard/SidebarLeftDashboard";
-import MainContentDashboard from "../Dashboard/MainContentDashboard";
 import SidebarRightDashboard from "../Dashboard/SidebarRightDashboard";
 import "../Dashboard/dashboardStyles.css";
 

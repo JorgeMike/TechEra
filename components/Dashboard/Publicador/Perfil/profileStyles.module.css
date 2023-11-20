@@ -1,0 +1,116 @@
+.header {
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.firstData p,
+.firstData h3 {
+  margin-left: 20px;
+  font-family: "Helvetica", sans-serif;
+}
+
+.firstData p,
+.groupInfo p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.firstData h3,
+.groupInfo h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.groupInfo {
+  margin-left: 20px;
+}
+
+/*  */
+
+.userInfo {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.editableField {
+  margin: 10px 30px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  display: flex;
+  border-bottom: 1px solid #cecece;
+}
+
+.editableField svg {
+  color: #003d82;
+  cursor: pointer;
+}
+
+.editableField button {
+  margin: 0 10px;
+}
+
+.editableField span {
+  color: #535353;
+  margin-right: 10px;
+}
+
+.editableField input[type="text"] {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+  width: calc(100% - 100px);
+}
+
+.editableField .save {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.editableField .save:hover {
+  background-color: #003d82;
+}
+
+.editableField .delete {
+  background-color: #ff5959;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.editableField .delete:hover {
+  background-color: #ff2727;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+  .editableField input[type="text"],
+  .editableField button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

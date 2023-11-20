@@ -1,10 +1,14 @@
 import Image from "next/image";
 import imagen from "@/public/images/articulos/articuloUno.jpg";
 
-export default function MisArticulos() {
+export default function MisArticulos({ user }: { user: string }) {
   return (
     <section className="service-section">
-      <h2>Mi articulo mas recientes</h2>
+      <h2>
+        {user == "administrador"
+          ? "Todos los articulos"
+          : "Mi articulo mas recientes"}
+      </h2>
       <div className="tile-container">
         <article className="large-tile">
           <Image src={imagen} alt="imagen" className="tile-image" />

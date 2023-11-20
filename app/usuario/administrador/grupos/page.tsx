@@ -1,10 +1,11 @@
 import Dashboard from "@/components/Layout/Dashboard";
-import { linksAdministrador } from "../page";
+import Grupos from "@/components/Dashboard/Administrador/Grupos";
+import { linksAdministrador } from "@/src/Arrays";
 
 export default function page() {
   return (
     <Dashboard links={linksAdministrador} user="administrador">
-      <div>Grupos</div>
+      <Grupos />
     </Dashboard>
   );
 }

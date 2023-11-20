@@ -783,6 +783,7 @@ button {
   justify-content: space-between;
   transition: 0.25s ease;
   position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   &:hover {
     transform: translateY(-5px);
@@ -852,6 +853,7 @@ button {
   position: relative;
   transition: 0.25s ease;
   overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   &:hover {
     transform: translateY(-5px);
@@ -958,5 +960,57 @@ button {
       font-size: 0.825rem;
       font-weight: 200;
     }
+  }
+}
+
+.tile input[type="text"], .tile textarea {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #cecece;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.tile label {
+  display: block;
+  margin-top: 10px;
+  color: #333;
+  font-size: .5em;
+}
+
+.tile input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(118, 255, 3, 0.2);
+}
+
+/* Estilos para el botón Crear Notificación */
+#createNotification {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #4caf50; 
+  color: white; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; 
+  transition: background-color 0.2s, transform 0.1s;
+  font-size: 1.5rem;
+}
+
+#createNotification:hover {
+  background-color: #45a049; /* Un tono más oscuro al pasar el mouse */
+}
+
+#createNotification:active {
+  transform: translateY(2px); /* Efecto de presión al hacer clic */
+}
+
+/* Estilos para dispositivos móviles y responsividad */
+@media (max-width: 768px) {
+  #createNotification {
+    width: 100%; /* Botón de ancho completo en dispositivos móviles */
+    padding: 10px; /* Padding uniforme */
   }
 }
