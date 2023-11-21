@@ -1,0 +1,100 @@
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.imageContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}
+
+.gradientOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  border-radius: 8px;
+}
+
+.carouselCaption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  color: white;
+  text-align: left;
+}
+
+.carouselCaption h3 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+.carouselCaption p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+@media (max-width: 576px) {
+  .imageContainer {
+    height: 250px;
+  }
+}
+
+.paragraphs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.paragraph {
+  width: 55%;
+}
+
+.paragraphImage,
+.imageParagraph,
+.image {
+  display: flex;
+  align-items: center;
+  width: 60%;
+  margin: 15px 0;
+}
+
+.paragraphImage p,
+.imageParagraph p {
+  text-align: justify;
+  flex: 1;
+  padding: 20px;
+}
+
+.paragraphImage img,
+.imageParagraph img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+}

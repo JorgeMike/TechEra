@@ -186,6 +186,7 @@ export const linksAdministrador: ILink[] = [
   { name: "Pendientes", route: "pendientes" },
   { name: "Grupos", route: "grupos" },
   { name: "Analíticas", route: "analiticas" },
+  { name: "Carousel", route: "carousel" },
 ];
 
 export const linksPublicador: ILink[] = [
